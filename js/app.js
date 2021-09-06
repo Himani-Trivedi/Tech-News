@@ -12,7 +12,7 @@ async function news2() {
     const d = new Date();
     // console.log(d.getFullYear()+'-' + zeros((d.getMonth()+1)) + "-" + zeros(d.getDate()));
     date = "from=" + d.getFullYear() + '-' + zeros((d.getMonth() + 1)) + "-" + zeros(d.getDate());
-    // console.log(date);
+    // console.log(date)
 
     let url = "https://newsapi.org/v2/top-headlines?category=technology&language=en&"
         + date +
@@ -23,6 +23,7 @@ async function news2() {
     news = await urls.json();
 
     return news;
+
 }
 
 news = news2();
